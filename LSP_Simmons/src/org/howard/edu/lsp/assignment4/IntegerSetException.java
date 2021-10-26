@@ -1,5 +1,5 @@
 package org.howard.edu.lsp.assignment4;
 
-class IntegerSetException extends Exception {
+public class IntegerSetException extends Exception {
 
 }

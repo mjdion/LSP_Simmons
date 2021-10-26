@@ -1,4 +1,5 @@
-package org.howard.edu.lsp.assignment4;
+package org.howard.edu.lsp.assignment5.integerset;
+
 import java.util.*;
 
 
@@ -92,7 +93,7 @@ public class IntegerSet {
 	/** Function below returns True if the list size is 0 and false if it is not
 	 * 
 	 */
-	public boolean isEmpty(){
+	boolean isEmpty(){
 		if (list.size() == 0) {
 			return true;
 			
@@ -123,28 +124,25 @@ public class IntegerSet {
 		
 	};
 	/** Function below finds the difference between two sets and prints the result
-	 * @throws IntegerSetException 
 	 * 
 	 * 
 	 */
 	
-	public void diff(IntegerSet list2) throws IntegerSetException {
-		 ArrayList<Integer> temp=list2.list;
-	      
-	     for (int i = 0;i<list.size();i++) {
-	    	 if (list2.contains(temp.get(i))) {
-	    		 list2.remove(temp.get(i));
-	    		 list.remove(temp.get(i));
-	    		 
-	    	 }
-	    System.out.println("Diff " +list);
-	    	 
-	    	 
-	    	 
-	     }
-	     
-	     
-	      
+	public void diff(IntegerSet intSetb) {
+		ArrayList<Integer> temp_list = list;
+		ArrayList<Integer> temp_list2 = intSetb.list;
+		int total = 0;
+		int total_2 = 0;
+		
+		for(int i=0;i<temp_list.size();i++) {
+			total = total + temp_list.get(i);
+			
+		};
+		for(int i=0;i<temp_list2.size();i++) {
+			total_2 = total_2 + temp_list2.get(i);
+			
+		};
+		System.out.println(total-total_2);
 		
 		
 		
