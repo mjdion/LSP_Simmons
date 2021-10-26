@@ -71,6 +71,12 @@ public class IntegerSetTest {
 		set1.add(30001);
 		int result = set1.largest();
 		assertEquals(30001,result);
+		Exception exception = assertThrows(IntegerSetException.class, () -> {
+			set1.clear();
+			set1.largest();
+			
+			
+		});
 		
 	
 		
@@ -109,6 +115,7 @@ public class IntegerSetTest {
 	}
 	/** Method below Tests the remove function by first testing the length
 	 * then checking whether that value is still contained on in the set
+	 * also tests integerSetException
 	 */
 	@Test
 	@DisplayName("Test for  Remove function")

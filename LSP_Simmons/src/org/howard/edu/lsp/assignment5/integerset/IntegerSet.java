@@ -112,11 +112,18 @@ public class IntegerSet {
 	
 	public void remove  (int item) throws IntegerSetException {
 		//System.out.println("we are in the remove function");
+	
+		if(list.contains(item) != true) {
+			throw new IntegerSetException();
+			
+		}
+			
 		for(int i = 0; i<list.size();i++) {
 			if (list.get(i) == item) {
 				//System.out.println(i);
 				list.remove(i);
 			};
+		
 		}
 		;
 	
