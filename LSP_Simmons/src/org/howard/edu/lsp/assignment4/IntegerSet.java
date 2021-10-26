@@ -195,7 +195,7 @@ public class IntegerSet {
 	
 	public int largest()throws IntegerSetException  {
 		if(list.size()==0) {
-			  IntegerSetException e= new IntegerSetException();
+			  IntegerSetException e = new IntegerSetException();
 	           throw e;
 	       }
 		int largest = list.get(0);
