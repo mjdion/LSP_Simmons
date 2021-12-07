@@ -7,7 +7,7 @@ import java.util.Iterator;
  * A class to implement a Polynomial as a list of terms, where each term has an
  * integer coefficient and a nonnegative integer exponent
  * 
- * @author your name
+ * @author Dion Simmons
  */
 public class Polynomial {
 	// instance variable declarations go here
@@ -58,7 +58,9 @@ public class Polynomial {
 			  term.set(i, t);
 			else*/
 			if (insert ==-1)
+				
 			  temp.add(t);
+			
 			term = temp;
 		}
 
@@ -71,9 +73,12 @@ public class Polynomial {
 	 * Polynomial
 	 * 
 	 * @param coeff
-	 *            the coeffiecent of the term to be deleted
+	 *            
 	 * @param expo
-	 *            the exponent of the term to be deleted
+	 *           
+	 *           
+	 *           
+	 *           
 	 */
 	public void delete(int coeff, int expo) {
 		boolean find = false;
@@ -93,9 +98,7 @@ public class Polynomial {
 	}
 
 	/**
-	 * Returns the product of all the terms of a Polynomial, as a String E.g.
-	 * for the polynomial 3x^2 + 7x^3 + 2x^5, will return 42x^10
-	 * 
+	 
 	 * @return the polynomial product, as a String
 	 */
 	public String product() {
@@ -111,7 +114,6 @@ public class Polynomial {
 	}
 
 	/**
-	 * Returns a polynomial as a String in this form: 3x^2 + 7x^3 + 2x^5
 	 * 
 	 * @return the polynomial as a String
 	 */
@@ -129,18 +131,16 @@ public class Polynomial {
 	}
 
 	/**
-	 * Reverses the order of the terms of a Polynomial. E.g. the polynomial 3x^2
-	 * + 7x^3 + 2x^5 would be 2x^5 + 7x^3 + 3x^2 after reversal
+	 * Reverses the order of Polynomial
+
 	 */
 	public void reverse() {
-		// TO DO: write method body here. The following statement is included
-		// only for development purposes. Remove after implementing the method
 		ArrayList<Term> temp = new ArrayList<Term>();
 
-		for (int i = term.size() - 1; i >= 0; i--) {
+		for (int i = term.size() - 1; i >= 0; i-- ) {
 			temp.add(term.get(i));
 		}
 		term = temp;
-		System.out.println("reverse method called");
+		System.out.println("called reverse method");
 	}
 }
